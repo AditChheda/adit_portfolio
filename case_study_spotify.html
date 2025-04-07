@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Case Study: Spotify</title>
+		<link rel="shortcut icon" href="images/Adit_32x32.png" type="image/png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+							<header id="header">
+								<a href="index.html" class="logo"><strong>Portfolio</strong> of Adit Chheda</a>
+								<ul class="icons">
+									<li><a href="https://www.linkedin.com/in/adit-chheda/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/AditChheda" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.kaggle.com/aditbharatchheda" class="icon brands fa-kaggle" target="_blank"><span class="label">Kaggle</span></a></li>
+								</ul>
+							</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Spotify Trend Analysis</h1>
+									</header>
+									
+									<!-- Tableau Visualization -->
+									<div class='tableauPlaceholder' id='viz1743988875752' style='position: relative'>
+										<noscript>
+											<a href='#'>
+												<img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifyTrendAnalysis_17439811808880&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+											</a>
+										</noscript>
+										<object class='tableauViz'  style='display:none;'>
+											<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+											<param name='embed_code_version' value='3' /> 
+											<param name='site_root' value='' />
+											<param name='name' value='SpotifyTrendAnalysis_17439811808880&#47;Dashboard1' />
+											<param name='tabs' value='no' />
+											<param name='toolbar' value='yes' />
+											<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifyTrendAnalysis_17439811808880&#47;Dashboard1&#47;1.png' /> 
+											<param name='animate_transition' value='yes' />
+											<param name='display_static_image' value='yes' />
+											<param name='display_spinner' value='yes' />
+											<param name='display_overlay' value='yes' />
+											<param name='display_count' value='yes' />
+											<param name='language' value='en-US' />
+										</object>
+									</div>
+									<script type='text/javascript'>                    
+										var divElement = document.getElementById('viz1743988875752');                    
+										var vizElement = divElement.getElementsByTagName('object')[0];                    
+										if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+										else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+										else { vizElement.style.width='100%';vizElement.style.height='1377px';}                     
+										var scriptElement = document.createElement('script');                    
+										scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+										vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+									</script>
+
+									<br>
+									<p>This project explores Spotify music trends using a dataset of audio features and metadata of tracks. The goal is to uncover insights about music popularity, analyze artist trends, and build a foundation for potential predictive modeling.</p>
+									
+									<hr class="major" />
+
+									<h2>Key Objectives</h2>
+									<ul>
+										<li>Analyze Spotify track data to uncover trends influencing song popularity.</li>
+										<li>Determine the impact of audio features like danceability, energy, and tempo on popularity.</li>
+										<li>Engineer meaningful features to enhance prediction performance.</li>
+										<li>Build and compare multiple regression models to predict song popularity.</li>
+										<li>Identify the most influential features using feature importance techniques.</li>
+									</ul>
+
+									<hr class="major" />
+
+									<h2>Tools and Libraries</h2>
+									<ul>
+										<li><strong>Python: </strong> Core programming language used for data analysis and modeling.</li>
+										<li><strong>Pandas: </strong> For data manipulation and preprocessing.</li>
+										<li><strong>Matplotlib & Seaborn: </strong> Data visualization and plotting.</li>
+										<li><strong>Scikit-learn: </strong> Machine learning modeling and evaluation.</li>
+									</ul>
+
+									<hr class="major" />
+
+									<h2>Workflow Overview</h2>
+									<ol>
+										<li><strong>Data Exploration</strong>
+											<ul>
+												<li>Explored key trends across duration, explicit content, danceability, energy, and tempo.</li>
+												<li>Analyzed genre-based popularity.</li>
+											</ul>
+										</li>
+										<li><strong>Feature Engineering</strong>
+											<ul>
+												<li>Dropped irrelevant columns (e.g., track ID, artist name).</li>
+												<li>Created derived features like duration_min and energy_danceability_ratio.</li>
+												<li>Scaled numerical features like loudness.</li>
+												<li>Encoded categorical variables using one-hot and frequency encoding.</li>
+											</ul>
+										</li>
+										<li><strong>Model Building</strong>
+											<ul>
+												<li>Prepared features (X) and target (y).</li>
+												<li>Trained and compared models:</li>
+												<ul>
+													<li>Linear Regression</li>
+													<li>Random Forest Regressor</li>
+													<li>SVR</li>
+													<li>Gradient Boosting Regressor</li>
+													<li>KNN Regressor</li>
+													<li>Decision Tree Regressor</li>
+												</ul>
+												<li>Evaluated performance using MSE, RMSE, and R² score.</li>
+											</ul>
+										</li>
+										<li><strong>Final Model Selection</strong>
+											<ul>
+												<li>Selected Random Forest Regressor as the best-performing model.</li>
+												<li>Tuned hyperparameters for optimal performance.</li>
+											</ul>
+										</li>
+										<li><strong>Feature Importance Analysis</strong>
+											<ul>
+												<li>Identified top features that drive popularity predictions.</li>
+												<li>Visualized their importance for better interpretability.</li>
+											</ul>
+										</li>
+										<li><strong>Dataset Export</strong>
+											<ul>
+												<li>Saved final processed dataset as processed_spotify_train.csv.</li>
+											</ul>
+										</li>
+									</ol>
+
+									<hr class="major" />
+
+									<h2>Visual Insights</h2>
+									<ul>
+										<li><strong>Song Duration vs Popularity:</strong>
+											Shorter songs (under 10 minutes) tend to be more popular.
+											<br>
+											<img src="images/song_duration_vs_popularity.png" alt="" />
+										</li><br>
+										<li><strong>Explicit Songs vs Popularity:</strong>
+											Explicit songs have a higher average popularity than non-explicit ones.
+											<br>
+											<img src="images/explicit_songs_vs_popularity.png" alt="" />
+										</li><br>
+										<li><strong>Danceability & Energy vs Popularity:</strong>
+											Tracks with higher danceability and energy are generally more popular.
+											<br>
+											<img src="images/danceability_vs_popularity.png" alt="" />
+											<br>
+											<img src="images/energy_vs_popularity.png" alt="" />
+										</li><br>
+										<li><strong>Tempo vs Popularity:</strong>
+											Fast-tempo tracks slightly outperform slower ones in popularity.
+											<br>
+											<img src="images/tempo_vs_popularity.png" alt="" />
+										</li><br>
+										<li><strong>Top Genres:</strong>
+											Certain genres like pop-film, k-pop, and chill rank highest in average popularity.
+											<br>
+											<img src="images/top_genres.png" alt="" />
+										</li><br>
+										<li><strong>Feature Importance (Random Forest Regressor):</strong>
+											<br>
+											<img src="images/feature_importance_in_random_forest_regressor.png" alt="" />
+										</li>
+									</ul>
+									
+
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Homepage</a></li>
+										<!-- <li><a href="case_study.html">Case Study</a></li>
+										<li><a href="tableau.html">Tableau</a></li>
+										<li><a href="sql.html">SQL</a></li> -->
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="mailto:aditbharatchheda@gmail.com">aditbharatchheda@gmail.com</a></li>
+										<li class="icon solid fa-phone">(908) 548-2959</li>
+										<li class="icon solid fa-home">New Jersey, USA</li>
+									</ul>
+								</section>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
