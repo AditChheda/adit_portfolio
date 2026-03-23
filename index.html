@@ -88,9 +88,32 @@
 								</section> -->
 								<section>
 									<header class="major">
-										<h2>Projects</h2>
+										<h2 id="projects">Projects</h2>
 									</header>
 									<div class="posts">
+										<article>
+											<a href="https://github.com/AditChheda/weather_forecast_data_etl_dockerized_microservices.git" target="_blank" class="image"><img src="images/etl_docker.png" alt="Weather Forecast Data ETL with Dockerized Microservices" /></a>
+											<h3>Weather Forecast Data ETL & Visualization with Dockerized Microservice</h3>
+											<p style="text-align: justify;">
+												This project demonstrates a full end-to-end weather data pipeline using modern data engineering tools. 
+												Weather forecast data for New York (including Timestamp, Temperature °C, and Precipitation Probability) for the 
+												previous 7 days and upcoming 7 days is fetched from the Open-Meteo API. The workflow is orchestrated with Apache Airflow, 
+												where a Kafka Producer extracts data and a Kafka Consumer inserts it into a PostgreSQL database. The data is then served 
+												through a FastAPI web application for real-time visualization. The entire system is containerized using Docker, running 
+												across 8 containers, providing a scalable and reproducible data pipeline. The initial run of the workflow takes approximately 4 minutes, with data storage being the most time-consuming step.
+											</p>
+											<p><strong>Skills: </strong>Docker, Apache Airflow, Kafka, PostgreSQL, FastAPI, Jinja2</p>
+											<ul class="actions">
+												<li><a href="https://github.com/AditChheda/weather_forecast_data_etl_dockerized_microservices.git" target="_blank" class="button">Code</a></li>
+												<li><a href="https://hub.docker.com/r/aditbharatchheda/weather_forecast_data_etl_airflow" target="_blank" class="button">Docker Image: Airflow</a></li>
+											</ul>
+											<ul class="actions">
+												<li><a href="https://hub.docker.com/r/aditbharatchheda/weather_forecast_data_etl_frontend" target="_blank" class="button">Docker Image: Frontend</a></li>
+											</ul>
+											<ul class="actions">
+												<li><a href="https://hub.docker.com/r/aditbharatchheda/weather_forecast_data_etl_consumer" target="_blank" class="button">Docker Image: Consumer</a></li>
+											</ul>
+										</article>
 										<article>
 											<a href="https://docs.google.com/presentation/d/13D_wS6mWZOvi8w5npfxLXmBSSWaOH1fdnCEIH0i9_XI/edit?usp=sharing" target="_blank" class="image"><img src="images/case_study_youtube_song_analysis.png" alt="YouTube Song Analysis" /></a>
 											<h3>Case Study: YouTube Song Analysis</h3>
@@ -147,8 +170,8 @@
 									</header>
 									<ul>
 										<li><a href="index.html">Homepage</a></li>
-										<!-- <li><a href="case_study.html">Case Study</a></li>
-										<li><a href="tableau.html">Tableau</a></li>
+										<li><a href="#projects">Projects</a></li>
+										<!-- <li><a href="tableau.html">Tableau</a></li>
 										<li><a href="sql.html">SQL</a></li> -->
 									</ul>
 								</nav>
